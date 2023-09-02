@@ -21,4 +21,5 @@ public interface RecipeService {
     byte[] getRecipePDF(Integer id) throws FileNotFoundException, JRException;
 
     Integer getNumberOfRecipes() throws Exception;
+    List<GetRecipeResource> getRecipes() throws Exception;
 }

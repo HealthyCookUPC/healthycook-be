@@ -41,6 +41,10 @@ public class RecipeRest {
     public ResponseEntity<List<GetRecipeResource>> getLastFiveRecipes() throws Exception{
         return ResponseEntity.ok(this.recipeService.getLastFiveRecipes());
     }
+    @RequestMapping(value = "getRecipes", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<GetRecipeResource>> getRecipes() throws Exception{
+        return ResponseEntity.ok(this.recipeService.getRecipes());
+    }
 
     @RequestMapping(value = "getNumberOfRecipes", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Integer> getNumberOfRecipes() throws Exception{

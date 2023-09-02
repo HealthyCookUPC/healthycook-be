@@ -214,4 +214,9 @@ public class RecipeServiceImpl implements RecipeService {
         return this.recipeRepository.findAll().size();
     }
 
+    @Override
+    public List<GetRecipeResource> getRecipes() throws Exception {
+        return GetRecipeResource.convert(this.recipeRepository.findAll());
+    }
+
 }
